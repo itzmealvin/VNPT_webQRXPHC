@@ -1,0 +1,29 @@
+[Unit]
+# describe the app
+Description=Tao VietQR XPHC
+# start the app after the network is available
+After=network.target
+# If NVIDIA:
+# After=nvidia-persistenced.service
+
+[Service]
+# usually you'll use 'simple'
+# one of https://www.freedesktop.org/software/systemd/man/systemd.service.html#Type=
+Type=simple
+# which user to use when starting the app
+User=nextjs
+# path to your application's root directory
+WorkingDirectory=/home/nextjs/qrxphc
+# the command to start the app
+# requires absolute paths
+ExecStart=/usr/local/bin/bun start
+# restart policy
+# one of {no|on-success|on-failure|on-abnormal|on-watchdog|on-abort|always}
+Restart=always
+RestartSec=5
+KillMode=control-group
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

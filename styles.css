@@ -1,0 +1,235 @@
+:root {
+  --brand-blue: #0b5ed7;
+  --brand-blue-dark: #0645a8;
+  --card-border: #e3e8ef;
+  --bg-soft: #f4f7fb;
+}
+
+body {
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
+  color: #1b2a3a;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.topbar {
+  background: linear-gradient(90deg, #003a99, #0b5ed7);
+  box-shadow: 0 4px 16px rgba(11, 94, 215, 0.22);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.brand-badge {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #ffcf3d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.authority-pill {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn-upload {
+  min-width: 130px;
+}
+
+.app-card {
+  border: 1px solid var(--card-border);
+  border-radius: 0.65rem;
+  box-shadow: 0 4px 14px rgba(23, 42, 63, 0.045);
+}
+
+.card-body {
+  padding: 0.9rem;
+}
+
+.card-title,
+h3.h5 {
+  margin-bottom: 0.6rem !important;
+  font-size: 1.05rem;
+}
+
+.pdf-preview-wrap {
+  position: relative;
+  background: #fff;
+  border: 1px solid #d9e1ec;
+  border-radius: 0.5rem;
+  min-height: 500px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+.pdf-canvas {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.placeholder-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8290a3;
+  font-weight: 500;
+  text-align: center;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+#qrPlaceholder {
+  position: static;
+  inset: auto;
+  display: block;
+  padding: 0.75rem 0;
+}
+
+.qr-box {
+  border: 1px solid #cfe0ff;
+  border-radius: 0.5rem;
+  background: #f9fbff;
+}
+
+.qr-image {
+  max-width: 150px;
+  border: 1px solid #d8e2f1;
+  border-radius: 0.25rem;
+}
+
+.form-label {
+  margin-bottom: 0.28rem;
+  font-size: 0.85rem;
+}
+
+.required-asterisk {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.form-control {
+  min-height: 34px;
+  padding: 0.34rem 0.55rem;
+  font-size: 0.9rem;
+}
+
+.bank-item,
+.bank-selected-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bank-logo-sm {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.ts-wrapper.single .ts-control {
+  min-height: 34px;
+  padding: 0.34rem 0.55rem;
+  font-size: 0.9rem;
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
+.ts-dropdown .option {
+  padding: 0.35rem 0.55rem;
+}
+
+textarea.form-control {
+  min-height: 58px;
+}
+
+.btn {
+  padding: 0.36rem 0.72rem;
+  font-size: 0.9rem;
+}
+
+.upload-row {
+  margin-bottom: 0.8rem !important;
+}
+
+.ocr-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 32, 52, 0.35);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ocr-overlay-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  text-align: center;
+  min-width: 220px;
+}
+
+@media (max-width: 992px) {
+  .upload-row .ms-auto {
+    margin-left: 0 !important;
+  }
+
+  .pdf-preview-wrap {
+    min-height: 420px;
+    max-height: 68vh;
+  }
+
+  .authority-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+
+  .card-body {
+    padding: 0.75rem;
+  }
+
+  .pdf-preview-wrap {
+    min-height: 320px;
+    max-height: 58vh;
+  }
+}
